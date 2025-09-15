@@ -1,0 +1,40 @@
+@use './helpers' as *;
+
+
+:root { 
+    --color-light: #FFFFFF;
+
+    --color-dark:  #18191B;
+    --color-darck-footer:#141517;
+
+
+    --color-gray-1: #EAEAFF60;
+
+    --color-gray-2: #1D1E20;
+
+    --color-accent: #6AEAA1;;
+
+
+    --border: #{rem(1)} solid var(--color-dark-1);
+
+
+    --font-family-base: "Manrope" , 'sans-serif';
+    --font-family-accent:"Manrope" , 'sans-serif';
+
+
+    --container-width: #{rem(1440)};
+    //ssas не умеет корректно обрабатывать ф-ции, используемые в значениях css переменных,
+    //именно для этого нужно оборачивать выражение в {} и ставить перед ним #.
+    //этот синтаксис явно дает понять препдпроцессору, что в этой функции нужно выполнить вычесление
+    
+    --container-padding-x: #{rem(16)};
+    //х-означает по горизонтали, ну и с {} та же песня
+
+    --transition-duration: 0.2s;
+    //0.2 наиболее оптимальное значение
+
+    @include laptop {
+        --container-width: #{rem(1440)};
+        //чтобы нормально отображались падинги не на мобилках
+    }
+}

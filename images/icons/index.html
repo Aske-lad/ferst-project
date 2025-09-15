@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+  content="width=device-width, user-scalable = no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Landing</title>
+  <link rel="stylesheet" href="../styles/main.css">
+  <script src="../Scripts/main.js" type="module" defer></script>
+</head>
+
+
+<body>
+    <header class="header" data-js-header>
+      <div class="header__body">
+        <div class="header__body-inner container">
+          <a href="./index.html" class="header__logo logo" aria-label="Home" title="Home">
+            <!-- aria-label="Home" title="Home"Так мы даем подсказку,
+     что клик по ссылке произведет переход на главную страницу 
+    атрибут title нужен для отображения стандартного браузерного тултипа-->
+            <img 
+            src="./images/icons/horizontal_white.svg" 
+            alt="" 
+            class="logo__image" 
+            width="179" height="50"/>
+          </a>
+          <div class="header__overlay" data-js-header-overlay>
+            <nav class="header__menu">
+              <ul class="header__menu-list">
+                <li class="header__menu-item">
+                  <a href="./About-us.html" class="header__menu-link">About us</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="./Quick-start.html" class="header__menu-link">Quick start</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="./Payment-system.html" class="header__menu-link">Payment system</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="./100+_trading-instruments.html" class="header__menu-link">100+ trading instruments</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="./Reviews.html" class="header__menu-link">Reviews</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="./Contacts.html" class="header__menu-link">Contacts</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <button class="header__burger-button  burger-button visible-mobile"
+          aria-label="Open menu"
+          title="Open menu"
+          type="button"
+          data-js-header-burger-button >
+          <div class="country-select">
+            <span class="country-select__flag" aria-hidden="true"></span>
+            
+            <select class="country-select__input" name="country">
+              <option value="">Select country</option>
+              <option value="US">United States</option>
+              <option value="GB">United Kingdom</option>
+              <option value="DE">Germany</option>
+            </select>
+        
+            <svg class="country-select__arrow" aria-hidden="true" viewBox="0 0 16 16">
+              <polyline points="3.5,6.5 8,11 12.5,6.5" stroke-width="2" fill="none" stroke="currentColor"></polyline>
+            </svg>
+          </div>
+            <span class="burger-button__line"></span>
+            <span class="burger-button__line"></span>
+            <span class="burger-button__line"></span> 
+          </button>
+        </div>
+      </div>
+    </header>
+  
+  <footer class="footer">
+    <h1>Footer</h1>
+  
+  </footer>
+  
+   </body>
+  
+  </html>

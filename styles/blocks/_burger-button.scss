@@ -1,0 +1,51 @@
+@use "../helpers" as *;
+
+.burger-button {
+  @include square(rem(38));
+
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: rem(8.5) rem(4.25);
+  color: var(--color-light);
+  background-color: transparent;
+  //здесь бэкграунд нужен чтобы сбросить дефолтные стили всех кнопок
+  border: none;
+  z-index: 3;
+
+  @include hover {
+    color: var(--color-accent);
+  }
+
+  &.is-active {
+    .burger-button__line {
+      &:first-child {
+        rotate: 45deg;
+        //таким образом мы поворачиваем первую полосочку на 45 градусов
+        transform-origin: 0;
+        translate: 0.25em -0.1em;
+        // этими свойствами корректируем чтобы получился норм крестик
+        //первое изменило "точку креплени" ну так смотрится, а второе сдвинуло полоску ближе к середине
+      }
+
+      &:nth-child(2) {
+        rotate: -45deg;
+        //та же тема только в обратную сторону
+      }
+
+      &:last-child {
+        width: 0;
+      }
+    }
+  }
+
+  &__line {
+    width: 100%;
+    height: rem(2);
+    background-color: currentColor;
+    //это свойство ссылается на основное тем самым обозначая белый цвет
+    //нужно это чтобы было потом проще работать с ее ховер эффектом
+    border-radius: 1rem;
+    transition-duration: var(--transition-duration);
+  }
+}

@@ -1,0 +1,1299 @@
+@use "../helpers/" as *;
+
+html, body {
+  overflow-x: hidden;
+  @include mobile {
+    width: 100%;
+    max-width: rem(390);
+  }
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.main {
+  background-color: var(--color-gray-2);
+
+  
+  &__section-promo {
+    background: url(../../images/background/promo-bg.png) no-repeat;
+    background-size: 100% 20%; // Сохраняем пропорции по высоте
+    background-position: center top;
+    width: 100%;
+    max-width: rem(1440);
+    margin: 0;
+    padding: 0;
+
+    @include mobile {
+      display: grid;
+      width: 100%;
+      max-width: rem(390);
+      height: 100%;
+      max-height: rem(844);
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      background: url(../../images/background/promo-bg.png) no-repeat;
+      background-position: 92% 80%;
+      background-size: 210%;
+      margin: 0;
+    }
+  }
+
+  &__promo {
+    position: relative;
+    width: rem(497);
+    height: rem(844);
+    @include mobile {
+      display: grid;
+      justify-items: center;
+      grid-template-columns: 1fr;
+      grid-template-rows: rem(40) rem(120) rem(40) rem(120);
+      width: rem(390);
+      height: rem(844);
+      margin: 0;
+      margin-bottom: rem(136);
+    }
+
+    &-rating {
+      max-width: rem(154);
+      width: 100%;
+      max-height: rem(40);
+      height: 100%;
+      color: var(--color-light);
+      font-family: var(--font-family-base);
+      font-weight: 500;
+      background-color: var(--color-gray-2);
+      border: 1px solid rgba(234, 234, 255, 0.04);
+      border-radius: rem(12);
+      padding: rem(8) rem(24);
+      transform: translate(rem(120), rem(130));
+
+      @include mobile {
+        grid-row: 1;
+        padding: rem(8) rem(24);
+        margin-top: rem(32);
+        max-width: rem(154);
+        height: rem(40);
+        font-family: var(--font-family-base);
+        font-weight: 500;
+        border-radius: rem(12);
+        transform: translate(rem(0), rem(0));
+        border: 1px solid rgba(234, 234, 255, 0.04);
+      }
+    }
+
+    &-secondary-text {
+      white-space: pre-wrap;
+      font-weight: 500;
+      font-size: rem(16);
+      transform: translate(rem(120), rem(154));
+      color: var(--color-gray-1);
+
+      @include mobile {
+        max-width: rem(390);
+        margin-top: rem(-80);
+        grid-row: 5;
+        font-weight: 500;
+        font-size: rem(14);
+        line-height: 171%;
+        text-align: center;
+        transform: translate(rem(0), rem(0));
+        color: rgba(234, 234, 255, 0.6);
+      }
+    }
+  }
+
+  &__title {
+    white-space: pre-wrap;
+    font-weight: 800;
+    font-size: rem(68);
+    line-height: 97%;
+    letter-spacing: -0.04em;
+    margin-bottom: rem(-40);
+    transform: translate(rem(120), rem(154));
+
+    @include mobile {
+      max-width: rem(390);
+      margin-top: rem(60);
+      grid-row: 2;
+      white-space: pre-wrap;
+      font-weight: 800;
+      font-size: 48px;
+      line-height: 117%;
+      letter-spacing: -0.04em;
+      text-align: center;
+      transform: translate(rem(0), rem(0));
+      color: var(--color-light);
+    }
+
+    &-span {
+      color: var(--color-accent);
+    }
+  }
+
+  &__button-start {
+    border-radius: rem(20);
+    padding: rem(20) rem(60);
+    width: rem(220);
+    height: rem(64);
+    background-color: var(--color-accent);
+    margin: rem(170) 0 0 rem(110);
+    font-weight: 600;
+    font-size: rem(16);
+    line-height: 150%;
+    text-align: center;
+    color: var(--color-dark);
+
+    @include mobile {
+      grid-row: 6;
+      margin: 0;
+      margin-inline: rem(20);
+      margin-top: rem(390);
+      border-radius: rem(20);
+      padding: rem(20) rem(60);
+      width: rem(358);
+      height: rem(64);
+    }
+  }
+
+  &__advertisement {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: rem(40) rem(120) rem(40) rem(120);
+    justify-items: center;
+    width: 100%;
+    max-width: rem(1440);
+    height: rem(370);
+    margin-bottom: rem(140);
+    @include mobile {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      justify-content: center;
+      grid-template-rows: auto;
+      width: rem(390);
+      height: rem(390);
+    }
+
+    &-img {
+      width: rem(700);
+      height: rem(400);
+
+      @include mobile {
+        width: rem(362);
+        height: rem(269);
+        transform: translate(rem(0), rem(0));
+      }
+    }
+
+    &-title {
+      grid-column: 2;
+      grid-row: 1;
+      width: rem(487);
+      white-space: pre-wrap;
+      font-family: var(--font-family-base);
+      font-weight: 800;
+      font-size: 52px;
+      line-height: 115%;
+      letter-spacing: -0.04em;
+      text-align: center;
+      color: var(--color-light);
+     
+      @include mobile {
+        width: 100%;
+        max-width: rem(358);
+        grid-column: 1;
+        grid-row: 1;
+        font-weight: 800;
+        font-size: rem(36);
+        line-height: 122%;
+        letter-spacing: -0.04em;
+        text-align: center;
+        transform: translate(rem(0), rem(0));
+        color: var(--color-light);
+      }
+    }
+
+    &-secondary-text {
+      grid-column: 2;
+      grid-row: 3;
+      width: rem(487);
+      white-space: pre-wrap;
+      font-family: var(--font-family-base);
+      font-weight: 500;
+      font-size: 16px;
+      
+      color: var(--color-gray-1);
+      @include mobile {
+        margin-top: rem(16);
+        width: 100%;
+        max-width: rem(358);
+        grid-column: 1;
+        grid-row: 2;
+        font-weight: 500;
+        font-size: rem(14);
+        line-height: 171%;
+        text-align: center;
+        transform: translate(rem(0), rem(0));
+        color: var(--color-gray-1);
+      }
+    }
+  }
+
+  &__us {
+    margin-bottom: rem(120);
+
+    @include mobile {
+      width: 100%;
+      max-width: rem(390);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &-article {
+      display: grid;
+      grid-template-columns: repeat(4, rem(282)); /* 4 колонки по 282px */
+      grid-auto-rows: rem(212); /* Высота каждой строки */
+      gap: rem(24); /* Расстояние между карточками */
+      justify-content: center; /* Центрирование сетки */
+      padding: rem(20);
+
+      @include mobile {
+        max-width: rem(390);
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: minmax(rem(180), auto); /* Высота каждой строки */
+        gap: rem(12);
+        justify-content: stretch; // Растягиваем на всю доступную ширину
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+
+    &-title {
+      font-family: var(--font-family-base);
+      font-weight: 800;
+      font-size: rem(52);
+      line-height: 115%;
+      letter-spacing: -0.04em;
+      text-align: center;
+      color: var(--color-light);
+
+      @include mobile {
+        margin-bottom: rem(32);
+        width: rem(358);
+        font-weight: 800;
+        font-size: rem(36);
+        line-height: 122%;
+        letter-spacing: -0.04em;
+        text-align: center;
+        color: var(--color-light);
+      }
+    }
+
+    &-card {
+      width: 100%;
+      max-width: rem(282);
+      height: rem(212);
+      background: var(--color-gray-2);
+      border-radius: rem(24);
+      border: 1px solid rgba(234, 234, 255, 0.04);
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: rem(24) 1fr rem(24) rem(72) rem(24);
+      gap: rem(12);
+      justify-items: center;
+      box-sizing: border-box;
+      transition: transform 0.2s ease;
+      @include mobile {
+        gap: rem(5);
+        grid-template-columns: 1fr;
+        grid-template-rows: rem(18) 1fr rem(24) rem(96) rem(24);
+        box-sizing: border-box;
+        overflow: hidden;
+        border: 1px solid rgba(234, 234, 255, 0.04);
+        border-radius: rem(24);
+        padding: rem(5);
+        width: rem(175);
+        height: rem(208);
+      }
+    }
+
+    &-card_title {
+      grid-row: 3;
+      margin-bottom: rem(12);
+      font-family: var(--font-family-base);
+      font-weight: 700;
+      font-size: rem(16);
+      line-height: 150%;
+      text-align: center;
+      color: var(--color-light);
+      @include mobile {
+        grid-row: 3;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+        white-space: normal;
+        font-family: var(--font-family-base);
+        font-weight: 500;
+        font-size: rem(16);
+        line-height: 150%;
+        text-align: center;
+        color: var(--color-light);
+      }
+    }
+
+    &-card-text {
+      grid-row: 4;
+      width: 100%;
+      height: 100%;
+      max-height: rem(108);
+      max-width: rem(234);
+      padding: 0 rem(0) rem(0) rem(0);
+      font-family: var(--font-family-base);
+      font-weight: 500;
+      font-size: rem(14);
+      line-height: 171%;
+      text-align: center;
+      color: var(--color-gray-1);
+      @include mobile {
+        grid-row: 4;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+        max-height: rem(96);
+        max-width: rem(149);
+        white-space: normal;
+        padding: 0;
+        font-weight: 500;
+        font-size: rem(14);
+        line-height: 171%;
+        text-align: center;
+        color: var(--color-gray-1);
+      }
+    }
+
+    &-image-card {
+      grid-row: 2;
+      @include mobile {
+        grid-row: 2;
+        width: rem(24);
+        height: rem(24);
+
+      }
+    }
+  }
+
+  &__works {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 4.375rem rem(148) rem(148) rem(148);
+    gap: rem(24);
+    max-width: rem(1440);
+    margin-inline: rem(124);
+    margin-bottom: rem(120);
+    @include mobile {
+      width: 100%;
+      max-width: rem(390);
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, rem(100)); /* Высота каждой строки */
+      gap: rem(12);
+      justify-content: stretch; // Растягиваем на всю доступную ширину
+      padding: rem(10);
+      margin: 0 auto;
+    }
+
+    &-card {
+      grid-column: 1/1;
+      margin: 0;
+      width: rem(358);
+      height: rem(100);
+    }
+
+    &-card-content {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      gap: rem(24);
+      border: 0.5px solid rgba(234, 234, 255, 0.04);
+      background-color: var(--color-gray-2);
+      border-radius: rem(24);
+      padding: rem(24);
+      width: rem(588);
+      height: rem(148);
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 160%; // Ширина градиентной области
+        height: 80%; // Высота градиентной области
+        border-radius: rem(24);
+        background: radial-gradient(
+          72.68% 97.15% at 144.53% 3.53%,
+          #62d982 0%,
+          rgba(29, 30, 32, 0) 100%
+        );
+        pointer-events: none; // Чтобы градиент не перехватывал клики
+        z-index: 1; // Помещаем градиент над фоном, но под текстом
+
+        @include mobile {
+          right: 0; // Корректируем позицию
+        }
+      }
+
+      @include mobile {
+        width: rem(358);
+        height: rem(100);
+        padding: rem(12);
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: rem(5);
+      }
+    }
+
+    &-title {
+      margin-bottom: rem(32);
+      font-family: var(--font-family-base);
+      font-weight: 800;
+      font-size: rem(52);
+      line-height: 115%;
+      letter-spacing: -0.04em;
+      text-align: left;
+      color: var(--color-light);
+
+      @include mobile {
+        font-weight: 800;
+        font-size: rem(36);
+        line-height: 122%;
+        text-align: center;
+        margin-bottom: rem(10);
+      }
+    }
+
+    &-card-title {
+      grid-row: 1/2;
+      font-weight: 800;
+      font-size: rem(52);
+      line-height: 115%;
+      letter-spacing: -0.04em;
+      text-align: left;
+      background: linear-gradient(180deg, #72fcc3 0%, #62d982 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @include mobile {
+        grid-row: 1;
+        max-height: rem(40);
+        font-size: rem(32);
+        line-height: 125%;
+      }
+    }
+
+    &-card-text {
+      grid-row: 2/3;
+      font-family: var(--font-family-base);
+      font-weight: 700;
+      font-size: rem(20);
+      line-height: 140%;
+      text-align: left;
+      color: var(--color-light);
+
+      @include mobile {
+        font-weight: 500;
+        font-size: rem(14);
+        line-height: 150%;
+      }
+    }
+
+    &-card-button {
+      grid-row: 1/3;
+      align-self: flex-end;
+      border-radius: rem(16);
+      padding: rem(12) rem(20);
+      margin-bottom: rem(14);
+      width: rem(140);
+      height: rem(48);
+      background-color: var(--color-accent);
+      font-family: var(--font-family-base);
+      font-weight: 600;
+      font-size: rem(14);
+      line-height: 150%;
+      text-align: center;
+      color: var(--color-dark);
+
+      @include mobile {
+        grid-row: 1;
+        margin-bottom: rem(0);
+        font-weight: 500;
+        font-size: rem(14);
+      }
+    }
+
+    &-background-img {
+      grid-column: 2/2;
+      grid-row: 2/4;
+      border-radius: rem(24);
+      width: rem(544);
+      height: rem(480);
+      transform: rotate(14deg);
+
+      @include mobile {
+        grid-column: 1;
+        grid-row: 5;
+        width: rem(372);
+        height: rem(300);
+        overflow: hidden;
+      }
+    }
+  }
+
+  &__help {
+    margin-bottom: rem(140);
+    width: 100%;
+    max-width: rem(1440);
+    @include mobile {
+      width: 100%;
+      max-width: rem(390);
+    }
+
+    &-title {
+      margin-top: rem(24);
+      margin-bottom: rem(16);
+      font-family: var(--font-family-base);
+      font-weight: 800;
+      font-size: rem(52);
+      line-height: 115%;
+      letter-spacing: -0.04em;
+      text-align: center;
+      color: var(--color-light);
+      @include mobile {
+        font-weight: 800;
+        font-size: rem(36);
+        line-height: 122%;
+      }
+    }
+
+    &-text {
+      margin-bottom: rem(32);
+      font-family: var(--font-family-base);
+      font-weight: 500;
+      font-size: rem(16);
+      line-height: 175%;
+      text-align: center;
+      color: var(--color-gray-1);
+
+      @include mobile {
+        font-weight: 500;
+        font-size: rem(14);
+        line-height: 171%;
+      }
+    }
+
+    &-card {
+      display: grid;
+      grid-template-columns: 2fr;
+      grid-template-rows: 1fr;
+      gap: rem(24);
+      margin-inline: rem(120);
+
+      @include mobile {
+        width: 100%;
+        height: 100%;
+        max-width: rem(358);
+        max-height: rem(148);
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        margin: 0;
+        margin-left: rem(15);
+      }
+    }
+
+    &-card-title {
+      font-weight: 700;
+      font-size: rem(16);
+      line-height: 150%;
+      text-align: center;
+      margin-bottom: rem(12);
+      color: var(--color-light);
+
+      @include mobile {
+        font-weight: 600;
+        font-size: rem(14);
+      }
+    }
+
+    &-card-text {
+      font-weight: 500;
+      font-size: rem(14);
+      line-height: 171%;
+      text-align: center;
+      color: var(--color-gray-1);
+    }
+
+    &-card-svg {
+      max-width: rem(52);
+      max-height: rem(52);
+      width: 100%;
+      height: 100%;
+      align-self: center;
+      margin-bottom: rem(16);
+
+      @include mobile {
+        max-width: rem(24);
+        max-height: rem(24);
+      }
+    }
+
+    &-card-content-support {
+      position: relative;
+      grid-column: 1;
+      grid-row: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: 1px solid rgba(234, 234, 255, 0.04);
+      background-color: var(--color-gray-2);
+      border-radius: rem(24);
+      padding: rem(24);
+      width: rem(588);
+      height: rem(176);
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 160%; // Ширина градиентной области
+        height: 80%; // Высота градиентной области
+        border-radius: rem(24);
+        background: radial-gradient(
+          72.68% 97.15% at 144.53% 3.53%,
+          #62d982 0%,
+          rgba(29, 30, 32, 0) 100%
+        );
+        pointer-events: none; // Чтобы градиент не перехватывал клики
+        z-index: 1; // Помещаем градиент над фоном, но под текстом
+      }
+
+      @include mobile {
+        width: 100%;
+        height: 100%;
+        max-width: rem(358);
+        max-height: rem(148);
+        padding: rem(12);
+        grid-column: 1;
+        grid-row: 1;
+      }
+    }
+
+    &-card-content-training {
+      position: relative;
+      grid-column: 2;
+      grid-row: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: 1px solid rgba(234, 234, 255, 0.04);
+      background-color: var(--color-gray-2);
+      border-radius: rem(24);
+      padding: rem(24);
+      width: rem(588);
+      height: rem(176);
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 160%; // Ширина градиентной области
+        height: 80%; // Высота градиентной области
+        border-radius: rem(24);
+        background: radial-gradient(
+          72.68% 97.15% at 144.53% 3.53%,
+          #62d982 0%,
+          rgba(29, 30, 32, 0) 100%
+        );
+        pointer-events: none; // Чтобы градиент не перехватывал клики
+        z-index: 1; // Помещаем градиент над фоном, но под текстом
+      }
+
+      @include mobile {
+        width: 100%;
+        height: 100%;
+        max-width: rem(358);
+        max-height: rem(148);
+        padding: rem(12);
+        grid-column: 1;
+        grid-row: 2;
+      }
+    }
+  }
+
+  &__tournaments {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:
+      [row1-start] rem(120) [row2-start] rem(56) [row3-start] rem(48)
+      [row3-end];
+    gap: rem(24);
+    background-image: url(../../images/background/background-tournaments.png);
+    background-position: center;
+    background-size: auto;
+    margin-bottom: rem(140);
+
+    &-title {
+      max-width: rem(499);
+      width: 100%;
+      position: relative;
+      grid-column: 2;
+      grid-row: 1;
+      white-space: pre;
+      left: rem(100);
+      font-family: var(--font-family-base);
+      font-weight: 800;
+      font-size: rem(52);
+      line-height: 115%;
+      letter-spacing: -0.04em;
+      color: var(--color-light);
+    }
+
+    &-secondary-text {
+      max-width: rem(499);
+      width: 100%;
+      position: relative;
+      left: rem(100);
+      grid-column: 2;
+      grid-row: 2;
+      white-space: pre;
+      font-family: var(--font-family-base);
+      font-weight: 500;
+      font-size: rem(16);
+      color: var(--color-gray-1);
+      line-height: 175%;
+    }
+
+    &-img-cup {
+      grid-column: 1;
+      grid-row: 1/2;
+      width: rem(400);
+      height: rem(350);
+      transform: translate(rem(150), rem(-60));
+    }
+
+    &-img-clock {
+      grid-column: 1;
+      grid-row: 2/3;
+      width: rem(400);
+      height: rem(350);
+      transform: translate(rem(375), rem(-130));
+    }
+
+    &-button {
+      position: relative;
+      left: rem(100);
+      width: rem(199);
+      height: rem(48);
+      grid-column: 2;
+      grid-row: 3;
+      border-radius: rem(16);
+      padding: rem(12) rem(40);
+      background-color: var(--color-accent);
+      font-family: var(--font-family-base);
+      font-weight: 600;
+      font-size: rem(14);
+      line-height: 150%;
+      text-align: center;
+      color: var(--color-dark);
+    }
+  }
+
+  &__user {
+    margin-bottom: rem(140);
+
+    @include mobile {
+      width: 100%;
+      max-width: rem(390);
+      margin-top: 136px;
+    }
+
+    &-title {
+      font-family: var(--font-family-base);
+      font-weight: 800;
+      font-size: rem(52);
+      line-height: 115%;
+      letter-spacing: -0.04em;
+      text-align: center;
+      margin-bottom: rem(32);
+      color: var(--color-light);
+
+      @include mobile {
+        font-size: rem(36);
+        line-height: 122%;
+      }
+    }
+
+    &-card {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+      gap: rem(24);
+      margin-inline: rem(120);
+
+      @include mobile {
+        max-width: 100%;
+        grid-template-columns: rem(360);
+        grid-template-rows: auto;
+        gap: rem(12);
+        box-sizing: border-box;
+        justify-items: center;
+        justify-content: center;
+        margin: 0;
+        margin-left: rem(8);
+        margin-inline: rem(0);
+      }
+    }
+
+    &-card-content {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      grid-column: auto;
+      grid-row: auto;
+      padding: rem(24);
+      width: rem(384);
+      height: rem(284);
+      margin-bottom: rem(32);
+      border: 1px solid rgba(234, 234, 255, 0.04);
+      border-radius: rem(24);
+      background-color: var(--color-gray-2);
+
+      @include mobile {
+        width: 100%;
+        height: 100%;
+        max-width: rem(358);
+        max-height: rem(228);
+        margin-bottom: rem(0);
+      }
+    }
+
+    &-card-img {
+      align-self: center;
+      border-radius: rem(12);
+      width: rem(80);
+      height: rem(80);
+      overflow: hidden;
+      margin-bottom: rem(12);
+      @include mobile {
+        width: 22%;
+        height: 100%;
+      }
+    }
+
+    &-card-title {
+      font-weight: 700;
+      font-size: rem(16);
+      line-height: 150%;
+      text-align: center;
+      color: var(--color-light);
+      margin-bottom: rem(12);
+    }
+
+    &-card-text {
+      font-weight: 500;
+      font-size: rem(14);
+      line-height: 171%;
+      text-align: center;
+      color: var(--color-gray-1);
+    }
+
+    &-button {
+      display: flex;
+      position: relative;
+      left: rem(110);
+      grid-column: 2;
+      border-radius: rem(16);
+      padding: rem(12) rem(35);
+      width: rem(165);
+      height: rem(48);
+      font-weight: 500;
+      font-size: rem(16);
+      line-height: 150%;
+      text-align: center;
+      color: var(--color-dark);
+      background-color: var(--color-accent);
+
+      @include mobile {
+        grid-column: 1;
+        left: rem(0);
+        width: rem(358);
+        margin-top: rem(20);
+      }
+    }
+  }
+  &__faq {
+    width: 100%;
+    max-width: rem(800);
+    margin: 0 auto;
+    margin-bottom: rem(140);
+    font-family: var(--font-family-base);
+
+    @include mobile {
+      width: 100%;
+      max-width: rem(370);
+    }
+
+    &-title {
+      font-weight: 800;
+      font-size: rem(52);
+      line-height: 115%;
+      letter-spacing: -0.04em;
+      text-align: center;
+      margin-bottom: rem(32);
+      color: var(--color-accent);
+
+      @include mobile {
+        font-size: rem(36);
+        line-height: 122%;
+      }
+    }
+
+    &-item {
+      margin-bottom: rem(16);
+
+      &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: relative;
+        padding: rem(24);
+        width: 100%;
+        height: 100%;
+        max-height: rem(150);
+        border-radius: rem(24);
+        cursor: pointer;
+        border: 1px solid rgba(234, 234, 255, 0.04);
+        background-color: var(--color-gray-2);
+        transition: all 0.3s ease;
+
+        @include mobile {
+          padding: rem(12);
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          border-radius: rem(24);
+          width: 160%; // Ширина градиентной области
+          height: 80%; // Высота градиентной области
+          background: radial-gradient(
+            72.68% 97.15% at 144.53% 3.53%,
+            #62d982 0%,
+            rgba(29, 30, 32, 0) 100%
+          );
+          pointer-events: none; // Чтобы градиент не перехватывал клики
+          z-index: 1; // Помещаем градиент над фоном, но под текстом
+        }
+
+        &:hover {
+          background-color: var(--color-gray-1);
+        }
+
+        // Добавляем стиль для активного состояния
+        &.active  {
+          border-radius: rem(24);
+          border-bottom: none;
+          
+        }
+      }
+
+      &-header-content {
+        flex: 1;
+        padding-right: rem(16);
+      }
+
+      &-header-span {
+        display: block;
+        font-weight: 700;
+        font-size: rem(20);
+        line-height: 140%;
+        margin-bottom: rem(8);
+        color: var(--color-light);
+      }
+
+      &-header-text {
+        font-weight: 500;
+        font-size: rem(14);
+        line-height: 171%;
+        color: rgba(234, 234, 255, 0.6);
+      }
+
+      &-header-icon {
+        flex-shrink: 0;
+        margin-left: rem(16);
+        transition: transform 0.3s ease;
+
+        // Активное состояние иконки
+        &.active {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    &-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+      background-color: var(--color-dark);
+
+     // Активное состояние контента
+     &.active {
+      display: block;
+      max-height: rem(1000);
+    }
+    
+      &-item {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding: rem(24);
+        width: 100%; // Ширина 100% для адаптивности
+        min-height: rem(76); // Минимальная высота вместо фиксированной
+        margin-top: rem(16);
+        cursor: pointer;
+        background-color: var(--color-gray-2);
+        border: 1px solid rgba(234, 234, 255, 0.04);
+        border-radius: rem(16); // Немного уменьшаем скругление
+        transition: all 0.3s ease;
+
+        @include mobile {
+          padding: rem(12);
+          margin-top: rem(12);
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 160%; // Ширина градиентной области
+          height: 80%; // Высота градиентной области
+          border-radius: rem(24);
+          background: radial-gradient(
+            72.68% 97.15% at 144.53% 3.53%,
+            #62d982 0%,
+            rgba(29, 30, 32, 0) 100%
+          );
+          pointer-events: none; // Чтобы градиент не перехватывал клики
+          z-index: 1; // Помещаем градиент над фоном, но под текстом
+        }
+
+        &:hover {
+          background-color: var(--color-gray-1);
+          transform: translateY(-2px); // Легкий эффект поднятия при наведении
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        &-icon {
+          align-self: end;
+          margin-left: rem(16);
+        }
+
+        &-text {
+          font-weight: 700;
+          font-size: rem(20);
+          line-height: 140%;
+          margin-bottom: rem(8);
+          color: var(--color-light);
+          @include mobile {
+            font-size: rem(14);
+          }
+        }
+      }
+    }
+  }
+
+  &__luck {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: rem(60) rem(56) 1fr 1fr;
+    gap: rem(24);
+    max-width: rem(1200);
+    width: 100%;
+    max-height: rem(304);
+    height: 100%;
+    padding: rem(24);
+    margin-inline: rem(120);
+    margin-bottom: rem(120);
+    border-radius: rem(24);
+    background-color: var(--color-gray-2);
+
+    @include mobile {
+      width: 100%;
+      height: 100%;
+      gap: rem(18);
+      max-width: rem(390);
+      max-height: rem(328);
+      margin-inline: rem(0);
+      margin-bottom: rem(50);
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: rem(60) rem(56) 1fr 1fr;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-radius: rem(24);
+      width: 160%; // Ширина градиентной области
+      height: 100%; // Высота градиентной области
+      background: radial-gradient(
+        80.27% 149.45% at 144.53% 50.53%,
+        #62d982 -30%,
+        rgba(29, 30, 32, 0) 100%
+      );
+      pointer-events: none; // Чтобы градиент не перехватывал клики
+      z-index: 1; // Помещаем градиент над фоном, но под текстом
+    }
+
+    &-title {
+      grid-row: 1/2;
+      width: 100%;
+      max-width: rem(322);
+      height: 100%;
+      max-height: rem(60);
+      margin-top: rem(16);
+      font-family: var(--font-family-base);
+      font-weight: 800;
+      font-size: rem(52);
+      line-height: 115%;
+      letter-spacing: -0.04em;
+      text-align: center;
+      color: var(--color-light);
+
+      @include mobile {
+        grid-row: 1;
+        max-width: rem(219);
+        height: 100%;
+        max-height: rem(44);
+        margin-top: rem(5);
+        font-size: rem(38);
+        font-weight: 600;
+        white-space: nowrap;
+      }
+    }
+    &-text {
+      grid-column: 1/3;
+      grid-row: 2/3;
+      width: 100%;
+      max-width: rem(496);
+      height: 100%;
+      margin-top: rem(16);
+      max-height: rem(56);
+      font-family: var(--font-family-base);
+      font-weight: 500;
+      font-size: rem(16);
+      line-height: 175%;
+      color: var(--color-gray-1);
+      @include mobile {
+        grid-row: 2;
+        margin-top: rem(-10);
+      }
+    }
+
+    &-email {
+      grid-column: 1;
+      grid-row: 3/4;
+      width: rem(360);
+      height: rem(60);
+      padding: rem(16) rem(18);
+      margin-top: rem(32);
+      text-align: start;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: rem(16);
+      font-weight: 500;
+      font-size: rem(16);
+      line-height: 150%;
+      transition: all 0.3s ease;
+      background-color: var(--color-gray-2);
+      color: var(--color-gray-1);
+
+      &:focus {
+        outline: none;
+        border-color: var(--color-accent);
+        box-shadow: 0 0 0 2px rgba(98, 217, 130, 0.3);
+      }
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      @include mobile {
+        max-width: rem(350);
+        width: 156%;
+        padding: rem(20) rem(16);
+        margin-top: rem(10);
+        grid-column: 1;
+        grid-row: 3;
+      }
+    }
+
+    &-button {
+      grid-column: 2;
+      grid-row: 3/4;
+      width: rem(220);
+      height: rem(60);
+      padding: rem(18) rem(85);
+      border-radius: rem(16);
+      margin-top: rem(32);
+      font-weight: 600;
+      font-size: rem(16);
+      line-height: 150%;
+      text-align: center;
+      color: var(--color-dark);
+      background-color: var(--color-accent);
+      transition: all 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #62d982;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(98, 217, 130, 0.3);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+
+      @include mobile {
+        max-width: rem(350);
+        width: 156%;
+        padding: rem(18) rem(40);
+        margin-top: rem(-10);
+        grid-column: 1;
+        grid-row: 4;
+      }
+    }
+
+    &-img {
+      grid-column: 2/4;
+      width: rem(450);
+      height: rem(430);
+      z-index: 2;
+      transform: translate(rem(270), rem(-100));
+
+      @include mobile {
+        grid-column: 1;
+        width: rem(150);
+        height: rem(150);
+        transform: translate(rem(240), rem(-384));
+      }
+    }
+  }
+}

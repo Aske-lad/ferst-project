@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable = no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Landing</title>
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+  <header class="header" data-js-header>
+    <div class="header__body">
+      <div class="header__body-inner container">
+        <a href="./index.html" class="header__logo logo" aria-label="Home" title="Home">
+          <img src="./images/icons/horizontal_white.svg" alt="" class="logo__image" width="99" height="44" />
+        </a>
+        <div class="header__overlay" data-js-header-overlay>
+          <nav class="header__menu">
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <a href="./About-us.html" class="header__menu-link">About&nbspus</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="./Quick-start.html" class="header__menu-link">Quick&nbspstart</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="./Payment-system.html" class="header__menu-link">Payment&nbspsystem</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="./100+_trading-instruments.html" class="header__menu-link">100+&nbsptrading&nbspinstruments</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="./Reviews.html" class="header__menu-link">Reviews</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="./Contacts.html" class="header__menu-link">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <button class="header__burger-button  burger-button visible-mobile" aria-label="Open menu" title="Open menu"
+          type="button" data-js-header-burger-button>
+          <span class="burger-button__line"></span>
+          <span class="burger-button__line"></span>
+          <span class="burger-button__line"></span>
+        </button>
+        <div class="header__country-select hidden-mobile">
+          <div class="header__selected-country hidden-mobile">
+            <div class="header__flag-circle hidden-mobile">
+              <img src="./images/icons/united-states.svg" alt="USA Flag" class="header__flag-img">
+            </div>
+            <span class="header__country-code">EN</span>
+            <svg class="header__arrow" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M5.00001 6.49976C4.74401 6.49976 4.48801 6.40176 4.29301 6.20676L0.293006 2.20676C-0.0979941 1.81576 -0.0979941 1.18376 0.293006 0.792762C0.684006 0.401762 1.31601 0.401762 1.70701 0.792762L5.01201 4.09776L8.30501 0.917762C8.70401 0.534762 9.33501 0.545762 9.71901 0.942762C10.103 1.33976 10.092 1.97376 9.69501 2.35676L5.69501 6.21876C5.50001 6.40676 5.25001 6.49976 5.00001 6.49976Z"
+                fill="white" />
+            </svg>
+          </div>
+          <div class="header__country-dropdown hidden-mobile">
+            <div class="header__country-option" data-value="us">
+              <div class="header__flag-circle">
+                <img src="./images/icons/united-states.svg" alt="USA Flag" class="header__flag-img">
+              </div>
+              <span class="header__country-code">EN</span>
+            </div>
+          </div>
+        </div>
+        <button class="header__button-login button hidden-mobile">
+          Login
+        </button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="main__section-promo">
+      <div class="main__promo ">
+        <p class="main__promo-rating">Age rating 21+</p>
+        <h1 class="main__title"><span class="main__title-span">Invest </span> fast.
+ <span class="main__title-span">Earn </span>accurately.
+        </h1>
+        <p class="main__promo-secondary-text">Platform for trading digital options and financial assets.
+          Start earning from the first minutes</p>
+        <button class="main__button-start button">
+          Start earning
+        </button>
+      </div>
+      <div class="main__advertisement">
+        <h2 class="main__advertisement-title">Discover the <span class="main__title-span">perfect
+platform</span> for yourself</h2>
+        <p class="main__advertisement-secondary-text">Simultaneous work with multiple charts,
+technical analysis, price
+history and much more — all from any device
+        </p>
+        <img class="main__advertisement-img" src="./images/content/advertisement.svg" alt="">
+      </div>
+      <div class="main__us">
+        <h2 class="main__us-title">
+          Why <span class="main__title-span">choose</span> us
+        </h2>
+        <div class="main__us-article">
+          <div class="main__us-card">
+            <img src="./images/icons/us-card-comp.svg" alt="логотип карточки" class="main__us-image-card" width="32"
+              height="44">
+            <h3 class="main__us-card_title">Flexible trading</h3>
+
+            <p class="main__us-card-text">Fast digital trading, express &amp;
+              &nbsp;deferred trades, copy trading.
+              Payouts up&nbsp;to&nbsp;218%.</p>
+          </div>
+
+          <div class="main__us-card">
+            <img src="./images/icons/us-card-question.svg" alt="логотип карточки" class="main__us-image-card" width="32"
+              height="32">
+            <h3 class="main__us-card_title hidden-mobile">Comprehensive training</h3>
+            <h3 class="main__us-card_title visible-mobile">Complete Training</h3>
+            <p class="main__us-card-text hidden-mobile">Our Help section contains
+              tutorials, guides, and
+              various trading strategies</p>
+              <p class="main__us-card-text visible-mobile">Our Help section contains guides, andvarious trading strategies</p>
+          </div>
+
+          <div class="main__us-card">
+            <img src="./images/icons/us-card-tool.svg" alt="логотип карточки" class="main__us-image-card" width="32"
+              height="32">
+            <h3 class="main__us-card_title hidden-mobile">Variety of&nbsp;trading tools</h3>
+            <h3 class="main__us-card_title visible-mobile">Trading tools</h3>
+            <p class="main__us-card-text">Trade a&nbsp;wide range of&nbsp;assets:
+              currencies, commodities, and
+              stocks</p>
+          </div>
+
+          <div class="main__us-card">
+            <img src="./images/icons/us-card-human.svg" alt="логотип карточки" class="main__us-image-card" width="32"
+              height="32">
+            <h3 class="main__us-card_title">Demo account</h3>
+            <p class="main__us-card-text">Test the platform on&nbsp;a&nbsp;demo
+              account with virtual funds&nbsp;&mdash; no
+              &nbsp;investment, no&nbsp;risk</p>
+          </div>
+
+
+          <div class="main__us-card">
+            <img src="./images/icons/us-card-teller.svg" alt="логотип карточки" class="main__us-image-card" width="32"
+              height="32">
+            <h3 class="main__us-card_title hidden-mobile">Easy Deposit &amp;&nbsp;Withdrawal</h3>
+             <h3 class="main__us-card_title visible-mobile">Easy Transfers</h3>
+            <p class="main__us-card-text">Use the most convenient method
+              of&nbsp;depositing and withdrawing
+              funds.</p>
+          </div>
+
+          <div class="main__us-card">
+            <img src="./images/icons/us-card-hand.svg" alt="логотип карточки" class="main__us-image-card" width="32"
+              height="32">
+            <h3 class="main__us-card_title hidden-mobile">High customer loyalty</h3>
+             <h3 class="main__us-card_title visible-mobile">Loyal Customers</h3>
+            <p class="main__us-card-text">Tournaments, bonuses, gifts,
+              promo codes, and contests for
+              every trader</p>
+          </div>
+     
+          <div class="main__us-card">
+            <img src="./images/icons/us-card-dollar.svg" alt="логотип карточки" class="main__us-image-card" width="32"
+              height="32">
+              <h3 class="main__us-card_title hidden-mobile">Trading advantages</h3>
+              <h3 class="main__us-card_title visible-mobile">Advantages</h3>
+            <p class="main__us-card-text hidden-mobile">Use cashback, &laquo;no&nbsp;risk&raquo; and other
+              advantages for more comfortable
+              trading with minimal risks.</p>
+              <p class="main__us-card-text visible-mobile">Use cashback, &laquo;no&nbsp;risk&raquo; and other
+                advantages for more comfortable
+                trading</p>
+          </div>
+
+          <div class="main__us-card">
+            <img src="./images/icons/us-card-kpi.svg" alt="логотип карточки" class="main__us-image-card" width="32"
+              height="32">
+            <h3 class="main__us-card_title hidden-mobile">Indicators and signals</h3>
+            <h3 class="main__us-card_title visible-mobile">Market Signals</h3>
+            <p class="main__us-card-text  hidden-mobile">Everything you need to&nbsp;trade at&nbsp;the
+              highest level, including popular
+              indicators and signals</p>
+              <p class="main__us-card-text visible-mobile">Everything you need to trade at the highest level, including indicators and signals</p>
+          </div>
+        </div>
+      </div>
+      <div class="main__works">
+        <h2 class="main__works-title">
+          How it <span class="main__title-span">works</span>
+        </h2>
+        <div class="main__works-card">
+          <div class="main__works-card-content">
+            <h3 class="main__works-card-title">1</h3>
+            <p class="main__works-card-text">Register quickly and for free</p>
+            <button class="main__works-card-button button">
+              Register now
+            </button>
+          </div>
+        </div>
+        <div class="main__works-card">
+          <div class="main__works-card-content">
+            <h3 class="main__works-card-title">2</h3>
+            <p class="main__works-card-text">Replenish your account in&nbsp;any convenient way</p>
+          </div>
+        </div>
+        <div class="main__works-card">
+          <div class="main__works-card-content">
+            <h3 class="main__works-card-title">3</h3>
+            <p class="main__works-card-text">Choose an&nbsp;asset and start earning today</p>
+          </div>
+        </div>
+        <img class="main__works-background-img" src="./images/content/advertisement.svg" alt="изображение приложения">
+      </div>
+      <div class="main__help">
+        <h2 class="main__help-title">Training and <span class="main__title-span">support</span></h2>
+        <p class="main__help-text">You are not alone, we will help</p>
+        <div class="main__help-card">
+          <div class="main__help-card-content-training">
+            <img class="main__help-card-svg" src="./images/icons/people-help.svg" alt="изображение">
+            <span class="main__help-card-title">Training materials</span>
+            <p class="main__help-card-text">Step-by-step guides, strategies and advice from experts</p>
+          </div>
+          <div class="main__help-card-content-support">
+            <img class="main__help-card-svg" src="./images/icons/support-help.svg" alt="изображение">
+            <span class="main__help-card-title">Support 24/7</span>
+            <p class="main__help-card-text">Chat, e-mail, Telegram. We&nbsp;respond quickly and to&nbsp;the point</p>
+          </div>
+        </div>
+      </div>
+      <div class="main__tournaments hidden-mobile">
+        <img src="./images/content/tournaments-img-cup.png" alt="" class="main__tournaments-img-cup">
+        <img src="./images/content/tournaments-img-clock.png" alt="" class="main__tournaments-img-clock">
+        <h2 class="main__tournaments-title"><span class="main__title-span">Tournaments</span>
+          for traders</h2>
+        <p class="main__tournaments-secondary-text">Participate in daily tournaments — free and with a minimum fee,
+          compete with other traders and win generous prize pools.</p>
+        <button class="main__tournaments-button button">Participate now</button>
+      </div>
+      <div class="main__user">
+        <h2 class="main__user-title"><span class="main__title-span">User</span> reviews</h2>
+        <div class="main__user-card">
+          <div class="main__user-card-content">
+            <img src="./images/icons/user-card-anna.png" alt="" class="main__user-card-img">
+            <span class="main__user-card-title">
+              Anna, 28&nbsp;years old, Yekaterinburg
+            </span>
+            <p class="main__user-card-text">
+              Azimut is my first experience, and I immediately understood how everything works. It's cool that you can
+              try it in demo!
+            </p>
+          </div>
+          <div class="main__user-card-content">
+            <img src="./images/icons/user-card-dima1.png" alt="" class="main__user-card-img">
+            <span class="main__user-card-title">
+              Dmitry, 34&nbsp;years old, Minsk
+            </span>
+            <p class="main__user-card-text">
+              Withdrew profit to the card without problems. Everything is clear, even without experience
+            </p>
+          </div>
+          <div class="main__user-card-content">
+            <img src="./images/icons/user-card-dima2.png" alt="" class="main__user-card-img">
+            <span class="main__user-card-title">
+              Dmitry, 34&nbsp;years old, Minsk
+            </span>
+            <p class="main__user-card-text">
+              Azimut is my first experience, and I immediately understood how everything works. It's cool that you can
+              try it in demo!
+            </p>
+          </div>
+          <button class="main__user-button button">Show more</button>
+        </div>
+      </div>
+      <div class="main__faq">
+        <h1 class="main__faq-title">FAQ</h1>
+        <div class="main__faq-item">
+          <div class="main__faq-item-header">
+            <div class="main__faq-item-header-content">
+              <span class="main__faq-item-header-span">What is trading?</span>
+              <p class="main__faq-item-header-text">Trading is the process of buying and selling financial instruments
+                (stocks, currencies, cryptocurrencies, goods) in order to make a profit due to fluctuations in their
+                prices.</p>
+            </div>
+            <svg class="main__faq-item-header-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M5.00001 6.49976C4.74401 6.49976 4.48801 6.40176 4.29301 6.20676L0.293006 2.20676C-0.0979941 1.81576 -0.0979941 1.18376 0.293006 0.792762C0.684006 0.401762 1.31601 0.401762 1.70701 0.792762L5.01201 4.09776L8.30501 0.917762C8.70401 0.534762 9.33501 0.545762 9.71901 0.942762C10.103 1.33976 10.092 1.97376 9.69501 2.35676L5.69501 6.21876C5.50001 6.40676 5.25001 6.49976 5.00001 6.49976Z"
+                fill="white" color="white" />
+            </svg>
+          </div>
+          <div class="main__faq-content ">
+            <div class="main__faq-content-item">
+              <p class="main__faq-content-item-text"> Where to start for a beginner in trading?</p>
+              <svg class="main__faq-content-item-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M5.00001 6.49976C4.74401 6.49976 4.48801 6.40176 4.29301 6.20676L0.293006 2.20676C-0.0979941 1.81576 -0.0979941 1.18376 0.293006 0.792762C0.684006 0.401762 1.31601 0.401762 1.70701 0.792762L5.01201 4.09776L8.30501 0.917762C8.70401 0.534762 9.33501 0.545762 9.71901 0.942762C10.103 1.33976 10.092 1.97376 9.69501 2.35676L5.69501 6.21876C5.50001 6.40676 5.25001 6.49976 5.00001 6.49976Z"
+                  fill="white" color="white" />
+              </svg>
+            </div>
+            <div class="main__faq-content-item">
+              <p class="main__faq-content-item-text">What is the difference between technical and fundamental analysis?
+              </p>
+              <svg class="main__faq-content-item-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M5.00001 6.49976C4.74401 6.49976 4.48801 6.40176 4.29301 6.20676L0.293006 2.20676C-0.0979941 1.81576 -0.0979941 1.18376 0.293006 0.792762C0.684006 0.401762 1.31601 0.401762 1.70701 0.792762L5.01201 4.09776L8.30501 0.917762C8.70401 0.534762 9.33501 0.545762 9.71901 0.942762C10.103 1.33976 10.092 1.97376 9.69501 2.35676L5.69501 6.21876C5.50001 6.40676 5.25001 6.49976 5.00001 6.49976Z"
+                  fill="white" color="white" />
+              </svg>
+            </div>
+            <div class="main__faq-content-item">
+              <p class="main__faq-content-item-text">How can I reduce the risks of trading?</p>
+              <svg class="main__faq-content-item-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M5.00001 6.49976C4.74401 6.49976 4.48801 6.40176 4.29301 6.20676L0.293006 2.20676C-0.0979941 1.81576 -0.0979941 1.18376 0.293006 0.792762C0.684006 0.401762 1.31601 0.401762 1.70701 0.792762L5.01201 4.09776L8.30501 0.917762C8.70401 0.534762 9.33501 0.545762 9.71901 0.942762C10.103 1.33976 10.092 1.97376 9.69501 2.35676L5.69501 6.21876C5.50001 6.40676 5.25001 6.49976 5.00001 6.49976Z"
+                  fill="white" color="white" />
+              </svg>
+            </div>
+            <div class="main__faq-content-item">
+              <p class="main__faq-content-item-text">Is it possible to make money trading without experience?</p>
+              <svg class="main__faq-content-item-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M5.00001 6.49976C4.74401 6.49976 4.48801 6.40176 4.29301 6.20676L0.293006 2.20676C-0.0979941 1.81576 -0.0979941 1.18376 0.293006 0.792762C0.684006 0.401762 1.31601 0.401762 1.70701 0.792762L5.01201 4.09776L8.30501 0.917762C8.70401 0.534762 9.33501 0.545762 9.71901 0.942762C10.103 1.33976 10.092 1.97376 9.69501 2.35676L5.69501 6.21876C5.50001 6.40676 5.25001 6.49976 5.00001 6.49976Z"
+                  fill="white" color="white" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main__luck">
+        <h2 class="main__luck-title">Try <span class="main__title-span">your luck!</span></h2>
+        <p class="main__luck-text">Specify your email address and receive a special offer from Azimut. If luck is on
+          your side, you will receive a free gift.</p>
+        <input class="main__luck-email" type="email" id="emailInput" placeholder="Enter your email" required>
+        <button class="main__luck-button">Check</button>
+        <img src="./images/content/luck-present.png" alt="Изображение подарка" class="main__luck-img">
+      </div>
+      <section class="footer">
+        <a href="./index.html" class="footer__logo logo" aria-label="Home" title="Home">
+          <img src="./images/icons/horizontal_white.svg" alt="" class="logo__image" width="99" height="44" />
+        </a>
+        <ul class="footer__list-help">
+          <li class="footer__list-help-item">About us</li>
+          <li class="footer__list-help-item">Quick start</li>
+          <li class="footer__list-help-item">Payment system</li>
+          <li class="footer__list-help-item">100+ trading instruments</li>
+          <li class="footer__list-help-item">Reviews</li>
+          <li class="footer__list-help-item">Contacts</li>
+        </ul>
+  
+          <ul class="footer__list-politic">
+          <li class="footer__list-item">Information Disclosure</li>
+          <li class="footer__list-item">Payment Policy</li>
+          <li class="footer__list-item">Privacy Policy</li>
+          <li class="footer__list-item">Anti-Money Laundering</li>
+          <li class="footer__list-item">Public Offer Agreement</li>
+        </ul>
+       <div class="footer__social">
+        <a href="" class="footer__social-link">
+          <img src="./images/icons/tg-icon.svg" alt="" width="20" height="20" class="footer__social-icon">
+        </a>
+        <a href="" class="footer__social-link">
+          <img src="./images/icons/yt-icon.svg" alt="" width="20" height="20" class="footer__social-icon">
+        </a>
+        <a href="" class="footer__social-link">
+          <img src="./images/icons/inst-icon.svg" alt="" width="20" height="20" class="footer__social-icon">
+        </a>
+       </div>
+        <p class="footer__azimut">© 2025 Azimut. All rights reserved</p>
+        <p class="footer__options">Options trading is associated with high risk</p>
+      </section>
+    </section>
+   
+  </main>
+  <script src="./scripts/main.js" type="module" defer></script>
+</body>
+
+</html>
